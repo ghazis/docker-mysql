@@ -8,3 +8,6 @@ services:
     environment:
       - MYSQL_ROOT_HOST=%
       - MYSQL_ROOT_PASSWORD=<password>
+    volumes:
+      - ./my.cnf:/etc/mysql/my.cnf
+    restart: unless-stopped
